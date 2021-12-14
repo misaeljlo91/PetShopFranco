@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body id="app">
+<!-- Encabezado de la página -->
+    <header>
+        <div class="row justify-content-evenly">
+            <p  class="col"><a href="index.html"  id="nombre">PetShop Franco</a></p>
+            <p class="col" id="informacion">
+                <a href="#" class="nosotros">Nosotros</a>
+                <a href="contacto.html" class="contacto">Contacto</a>
+            </p>
+        </div>
+    </header>
+<!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid" id="navbar">
+            <a href="index.html" id="logo"><img src="./assets/petshop.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" id="menu">&equiv;</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./assets/perro.png" alt="Perro"> Perros</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="juguetes.html">Juguetes</a></li>
+                            <li><a class="dropdown-item" href="farmacia.html">Farmacia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./assets/gato.png" alt="Gato"> Gatos</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="juguetes.html">Juguetes</a></li>
+                            <li><a class="dropdown-item" href="farmacia.html">Farmacia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./assets/pajaro.png" alt="Pajaro"> Aves</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="juguetes.html">Juguetes</a></li>
+                            <li><a class="dropdown-item" href="farmacia.html">Farmacia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./assets/roedor.png" alt="Roedor"> Roedores</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="juguetes.html">Juguetes</a></li>
+                            <li><a class="dropdown-item" href="farmacia.html">Farmacia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./assets/pez.png" alt="Pez"> Peces</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="juguetes.html">Juguetes</a></li>
+                            <li><a class="dropdown-item" href="farmacia.html">Farmacia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Contenidos de la página -->
+    <main>
+        <section>
+            <div class="row justify-content-between">
+                <h2 class="col-sm-6 col-md-4" id="subtitle">Farmacia</h2>
+                <form class="col-sm-6 col-md-4" id="nav_search">
+                    <label for="busqueda" class="visually-hidden"></label>
+                    <input type="text" class="form-control" id="busqueda" placeholder="¿Qué estás buscando?" v-model="busqueda">
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ordenar por:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <label class="list-group-item">Alfabeticamente</label>
+                                    <label class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="ascendente" id="ascendente">A - Z</label>
+                                    <label class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="descendente" id="descendente">Z - A</label>
+                                    <label class="list-group-item">Precio</label>
+                                    <label class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="ascendente" id="ascendente">Ascendente</label>
+                                    <label class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="descendente" id="descendente">Descendente</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-6 col-md-9" v-if="noHayBusqueda" v-show="!cargar">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </symbol>
+                    </svg>
+                    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                            <div>¡Lo sentimos! No hay resultados para esta búsqueda.</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-9" id="loading" v-show="cargar">
+                    <img src="./assets/loading.svg" alt="loading">
+                </div>
+                <div class="col-sm-6 col-md-9" v-show="!cargar">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6" v-for="producto in busquedaProducto" :key="producto._id">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <p class="card-title" id="tituloProducto"><a class="tituloProducto" :href="">{{producto.nombre}}</a></p>
+                                    <div class="col-md-4 align-self-center">
+                                        <img :src="producto.imagen" class="img-fluid rounded-center">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="abrirM">Descripción</button>
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                    <div class="modal-header" id="tituloM">
+                                                        <h5 class="modal-title" id="exampleModalLabel">{{producto.nombre}}</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <p id="descripcionProducto" class="modal-body">{{producto.descripcion}}</p>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="cerrarM">Cerrar</button>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p v-if="producto.stock >= 4" class="alert alert-primary" role="alert">Stock: {{producto.stock}} U.</p>
+                                            <p v-if="producto.stock <= 3" class="alert alert-warning" role="alert">¡Últimas unidades!: {{producto.stock}} U.</p>
+                                            <p v-if="producto.stock < 0" class="alert alert-danger" role="alert">¡Sin unidades en este momento!</p>
+                                            </div>
+                                            <div class="row justify-content-around" id="carrito">
+                                                <p class="col-4 card-text" id="precioProducto">$ {{producto.precio}}</p>
+                                                <button class="col-2 col-sm-7 btn btn-primary" id="agregarProducto">Agregar al carrito <i class="bi bi-cart4"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- Pie de la página web -->
+    <footer class="container-fluid">
+        <section class="row align-items-center" id="footer_suscribete">
+            <div class="col-md-1" id="carta"><img src="./assets/suscribir.png" alt="Suscribir"></div>
+            <div class="col">
+                <p class="familia">Forma parte de nuestra familia.</p>
+                <p>Suscribite para recibir todas nuestras ofertas y novedades</p>
+            </div>
+            <div class="col-md-7">
+                <form class="row g-3">
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" id="name" placeholder="Nombre">
+                    </div>
+                    <div class="col-md-5">
+                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating" id="enviar_footer">
+                            <input class="btn btn-primary" type="submit" value="Enviar" id="footer_enviar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="row" id="footer_copy_tyc">
+            <p class="col" id="footer_copy">&copy; 2021 Misael J. López</p>
+            <p class="col" id="footer_tyc"><a href="#" class="footer_tyc">Términos y condiciones</a></p>
+        </section>
+    </footer>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

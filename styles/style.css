@@ -1,0 +1,264 @@
+body{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+/* Encabezado de la página */
+
+header{
+    padding: 2vh 3vw 0 3vw;
+}
+a#nombre{
+    color: black;
+    font-size: large;
+    text-decoration: none;
+}
+p#informacion{
+    text-align: right;
+}
+a.nosotros{
+    padding-right: 1vw;
+    color: black;
+    text-decoration: none;
+    border-right: 1px solid black;
+}
+a.contacto{
+    padding-left: 1vw;
+    color: black;
+    text-decoration: none;
+}
+a.nosotros:hover, a.contacto:hover{
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+/* Barra de navegación */
+
+nav.navbar{
+    background-color: #90ee90;
+    padding: 1vh 4vw 1vh 4vw;
+}
+a#logo{
+    margin-right:3vw;
+}
+button.navbar-toggler{
+    background-color: #51cd3f;
+}
+span#menu{
+    margin-top: .5rem;
+    font-size: 20px;
+}
+a.nav-link{
+    color: black;
+    font-weight: 900;
+}
+a.nav-link:hover{
+    color: #51cd3f;
+}
+ul.dropdown-menu{
+    background-color: #51cd3f;
+}
+a.dropdown-item:hover{
+    background-color: #90ee90;
+    font-weight: bold;
+}
+
+/* Contenido de la página */
+
+main{
+    margin: 1.5rem 2rem 1.5rem 2rem;
+    text-align: justify;
+}
+h2.subtitle_index, h3.subtitle{
+    border-left: 4px solid chocolate;
+    padding: .5rem .5rem .5rem 1.2rem;
+    margin: 1rem 0 1rem 2rem;
+    font-style: italic;
+}
+h2#subtitle{
+    border-left: 4px solid chocolate;
+    padding: .5rem .5rem .5rem 1.2rem;
+    margin: 0 0 1.5rem 3rem;
+    font-style: italic;
+}
+p.text{
+    text-indent: 2rem;
+}
+div#loading{
+    text-align: center;
+}
+
+/* Index */
+
+button.accordion-button{
+    background-color: #90ee90;
+    font-weight: bold;
+    font-style: italic;
+}
+button.accordion-button:hover{
+    background-color: #51cd3f;
+}
+button.accordion-button:not(.collapsed){
+    background-color: #51cd3f;
+    color: black;
+}button.accordion-button:not(.collapsed):hover{
+    background-color: #90ee90;
+    color: black;
+}
+
+/* Farmacia y Juguetes */ /* id="agregarProducto" */
+
+label.list-group-item{
+    border: none;
+}
+input#ascendente, input#descendente{
+    margin-left: 1rem;
+}
+div.card{
+    border: 1px solid #51cd3f;
+}
+p#tituloProducto{
+    background-color: #51cd3f;
+    padding: .5rem;
+    text-align: center;
+    margin: 0;
+}
+a.tituloProducto{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: smaller;
+}
+a.tituloProducto:hover{
+    text-decoration: underline;
+}
+div.card-body{
+    padding: 0;
+}
+button#abrirM{
+    width: 92%;
+    margin: .5rem .5rem 3rem .5rem;
+    background-color: #90ee90;
+    color: black;
+    border: none;
+}
+button#abrirM:hover{
+    background-color: #51cd3f;
+    font-weight: 900;
+}
+div#tituloM{
+    background-color: #51cd3f;
+}
+p#descripcionProducto{
+    padding: 1rem;
+    font-size: 16px;
+}
+button#cerrarM{
+    margin: .5rem;
+    background-color: #EFA94A;
+    color: black;
+    border: none;
+}button#cerrarM:hover{
+    background-color: #ff8c00;
+    font-weight: 900;
+}
+p.alert{
+    margin: .5rem;
+    padding: .2rem;
+    text-align: center;
+    font-weight: 900;
+}
+p#precioProducto{
+    font-size: larger;
+    font-weight: 900;
+}
+div#carrito{
+    padding: 0 .8rem .5rem 0;
+}
+button#agregarProducto{
+    background-color: #EFA94A;
+    border: none;
+    color: black;
+}
+button#agregarProducto:hover{
+    background-color: #ff8c00;
+    font-weight: 900;
+}
+
+/* Contacto */
+
+p.contacto{
+    margin: 0;
+    font-weight: 900;
+}
+div#iconos{
+    margin-right: 1rem;
+}
+a.mail{
+    color: black;
+    text-decoration: none;
+}
+a.mail:hover{
+    font-weight: 900;
+    text-decoration: underline;
+}
+label#formulario, label#formulario_1, label#formulario_2, label#formulario_3{
+    margin: 0;
+}
+div#enviar{
+    text-align: center;
+} 
+input#formulario_enviar{
+    background-color: #51cd3f;
+    color: black;
+    border: none;
+}
+input#formulario_enviar:hover{
+    font-weight: 900;
+}
+p#perro-gato{
+    margin: 2rem 0 0 5rem;
+}
+
+/* Pie de página */
+
+#footer_suscribete{
+    background-color: chocolate;
+    padding: 2.5vh 1vw 1vh 1vw;
+}
+div#carta{
+    text-align: right;
+}
+p.familia{
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin: 0;
+}
+input#footer_enviar{
+    background-color: #EFA94A;
+    color: black;
+    border: none;
+}
+input#footer_enviar:hover{
+    background-color: #ff8c00;
+    font-weight: 900;
+}
+div#enviar_footer{
+    text-align: center;
+}
+#footer_copy_tyc{
+    background-color: #EFA94A;
+    padding: 1rem;
+    font-weight: 900;
+}
+#footer_copy{
+    text-align: right;
+    border-right: 1px solid black;
+    color: black;
+}
+a.footer_tyc{
+    text-decoration: none;
+    color: black;
+}
+a.footer_tyc:hover{
+    text-decoration: underline;
+}
